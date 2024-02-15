@@ -1,0 +1,63 @@
+/* header_logo */
+.header_logo {
+  margin-top: 22px;
+  margin-left: 24px;
+}
+.logo_img {
+  width: 120px;
+  height: 30px;
+}
+
+/* header_menu */
+.header_menu {
+  width: 380px;
+  display: flex;
+  margin-top: 28px;
+}
+.main_li {
+  position: relative;
+}
+.main_link {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+.sub_li {
+  margin-top: 22px;
+}
+
+/* header_search */
+.search_form {
+  width: 240px;
+  height: 36px;
+  display: flex;
+  border-width: 1px;
+  border-color: #5a5550;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-top: 20px;
+  padding: 4px;
+}
+.search_input {
+  border-radius: 9999px;
+  padding-left: 10px;
+}
+.search_button {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+
+/* header_sub */
+.header_sub {
+  width: 160px;
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.sub_sitemap {
+  width: 22px;
+  margin-right: 24px;
+}

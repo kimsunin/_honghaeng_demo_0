@@ -18,17 +18,15 @@ export default function Header() {
       }`}
     >
       {subMenu.map((item, index) => (
-        <li key={index} className={styles.sub_li}>
+        <li key={index}>
           <Link href={item.href}>{item.title}</Link>
         </li>
       ))}
     </ul>
   );
   const mainMenuList = headerHref.map((item, index) => (
-    <li key={index} className={styles.main_li}>
-      <Link href={item.href} className={styles.main_link}>
-        {item.title}
-      </Link>
+    <li key={index}>
+      <Link href={item.href}>{item.title}</Link>
       {item.subMenu && subMenuList(item.subMenu)}
     </li>
   ));
@@ -36,12 +34,7 @@ export default function Header() {
   return (
     <header id="header">
       <Link href="/" className={styles.header_logo}>
-        <Image
-          src={homeImg}
-          alt="homeImg"
-          className={styles.logo_img}
-          priority={true}
-        ></Image>
+        <Image src={homeImg} alt="homeImg" priority={true}></Image>
       </Link>
       <ul
         className={styles.header_menu}
@@ -51,11 +44,8 @@ export default function Header() {
         {mainMenuList}
       </ul>
       <form className={styles.search_form}>
-        <input
-          className={styles.search_input}
-          placeholder="알고 싶은 정보가 있으세요?"
-        ></input>
-        <button className={styles.search_button}>
+        <input placeholder="알고 싶은 정보가 있으세요?"></input>
+        <button>
           <Image src={searchImg} alt="searchImg" priority={true}></Image>
         </button>
       </form>

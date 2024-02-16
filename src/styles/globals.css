@@ -23,6 +23,7 @@
   background: white;
   position: fixed;
   z-index: 100;
+  top: 0;
   display: flex;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   justify-content: space-between;
@@ -30,14 +31,22 @@
 
 /* nav */
 #nav {
+  height: 300px;
+  background: rgb(226 232 240);
+  margin-top: 80px;
 }
 
 /* main */
 #main {
+  height: 1000px;
 }
 #content {
 }
 
 /* footer */
 #footer {
+  width: 100%;
+  height: 300px;
+  background: #5a5550;
+  opacity: 80%;
 }

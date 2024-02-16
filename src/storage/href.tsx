@@ -4,7 +4,7 @@ export const headerHref = [
     title: "농행동행",
     href: "/pages/introduce",
     subMenu: [
-      { title: "농행동행 소개", href: "/pages/introduce/nongdong" },
+      { title: "농행동행 소개", href: "/pages/introduce/nonghang" },
       { title: "농촌관광 소개", href: "/pages/introduce/tour" },
     ],
   },
@@ -32,4 +32,23 @@ export const headerHref = [
       { title: "고객문의", href: "/pages/community/inquiry" },
     ],
   },
+];
+
+// nav href
+export const introduceHref = {
+  mainMenu: { href: "/pages/introduce", title: "농행동행" },
+  subMenu: [
+    { href: "/pages/introduce/nonghang", title: "농행동행 소개" },
+    { href: "/pages/introduce/tour", title: "농촌관광 소개" },
+  ],
+};
+
+//
+export const footerHref = [
+  { href: "/", title: "소개" },
+  { href: "/", title: "이벤트" },
+  { href: "/", title: "이용약관" },
+  { href: "/", title: "개인정보처리방침" },
+  { href: "/", title: "이메일수집거부" },
+  { href: "/", title: "고객문의" },
 ];

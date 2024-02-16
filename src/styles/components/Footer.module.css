@@ -1,0 +1,20 @@
+/* footer_sub */
+.footer_sub {
+  height: 80px;
+}
+
+.footer_hr {
+  width: 100%;
+  border-width: 1px;
+  border-color: white;
+}
+
+/* footer_main */
+.footer_main {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  color: white;
+}
+.footer_main > * {
+  margin: 20px 20px 20px 0;
+}

@@ -2,21 +2,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/components/Header.module.css";
+import styles from "./Header.module.css";
+import HeaderSearch from "../Search/HeaderSearch/HeaderSearch";
 import { headerHref } from "@/storage/href";
-import homeImg from "../../public/img/header/homeImg.png";
-import searchImg from "../../public/img/header/searchImg.png";
-import sitemapImg from "../../public/img/header/sitemapImg.png";
+import homeImg from "img/header/homeImg.png";
+import sitemapImg from "img/header/sitemapImg.png";
+
+type SubMenuType = { href: string; title: string };
 
 export default function Header() {
+  // 로그인 상태 관리
+
+  // 메뉴바 호버상태 관리
   const [isHover, setIsHover] = useState(false);
 
-  const subMenuList = (subMenu) => (
-    <ul
-      className={`absolute w-full text-center top-[54px] z-10 overflow-hidden duration-500 ${
-        isHover ? "h-[210px]" : "h-0"
-      }`}
-    >
+  const subMenuList = (subMenu: SubMenuType[]) => (
+    <ul className={`${styles.header_subMenu} ${isHover && styles.on}`}>
       {subMenu.map((item, index) => (
         <li key={index}>
           <Link href={item.href}>{item.title}</Link>
@@ -43,26 +44,24 @@ export default function Header() {
       >
         {mainMenuList}
       </ul>
-      <form className={styles.search_form}>
-        <input placeholder="알고 싶은 정보가 있으세요?"></input>
-        <button>
-          <Image src={searchImg} alt="searchImg" priority={true}></Image>
-        </button>
-      </form>
+      <HeaderSearch />
       <div className={styles.header_sub}>
         <Link href="/pages/mypage/login">로그인</Link>
         <Link href="/pages/mypage">마이페이지</Link>
-        <Link href="pages/sitemap" className={styles.sub_sitemap}>
+        <Link href="pages/sitemap">
           <Image src={sitemapImg} alt="sitemapImg" priority={true}></Image>
         </Link>
       </div>
       <div
-        className={`bg-[#FF7A00]/80 absolute top-[80px] w-full overflow-hidden duration-500 ${
-          isHover ? "h-[210px]" : "h-0"
-        }`}
+        className={`${styles.header_bg} ${isHover && styles.on}`}
         onMouseOver={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       ></div>
     </header>
   );
 }
+
+// export function getStaticProps() {
+//   const loginState = localStorage.getItem("isLogin");
+//   return { props: loginState };
+// }

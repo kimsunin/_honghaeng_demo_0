@@ -1,0 +1,42 @@
+/* section1 */
+.section1 {
+  height: 500px;
+}
+.section1 > img {
+  height: 100%;
+}
+.section1 > h1 {
+  font-size: 25px;
+  color: #614426;
+  position: absolute;
+  left: 10%;
+  top: 160px;
+}
+.section1 > h2 {
+  color: #887664;
+  position: absolute;
+  left: 10%;
+  top: 256px;
+}
+.section1 > a {
+  width: 200px;
+  height: 36px;
+  position: absolute;
+  left: 10%;
+  top: 360px;
+  display: flex;
+  border-radius: 9999px;
+  padding: 6px 20px;
+  color: white;
+  background: #ff7a00;
+}
+.section1 > a > img {
+  width: 22px;
+  height: 10px;
+  margin: 7px 0px 7px 22px;
+}
+
+/* section2 */
+.section2 {
+  height: 400px;
+}

@@ -1,7 +1,14 @@
 import Link from "next/link";
-import styles from "../styles/components/Navigation.module.css";
+import styles from "./Navigation.module.css";
 
-export default function Navigation({ props }) {
+type PropsType = {
+  props: {
+    mainMenu: { href: string; title: string };
+    subMenu: { href: string; title: string }[];
+  };
+};
+
+export default function Navigation({ props }: PropsType) {
   const subMenuList = props.subMenu.map((item, index) => (
     <li key={index}>
       <Link href={item.href}>{item.title}</Link>

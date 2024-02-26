@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/components/Footer.module.css";
+import styles from "./Footer.module.css";
 import { footerHref } from "@/storage/href";
 
 export default function Footer() {

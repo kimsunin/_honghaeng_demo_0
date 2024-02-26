@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation/Navigation";
 import { introduceHref } from "@/storage/href";
 
 export default function introdce() {

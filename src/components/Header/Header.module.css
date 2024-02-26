@@ -1,0 +1,53 @@
+/* header_logo */
+.header_logo {
+  @apply mt-[22px] ml-[24px];
+}
+.header_logo > img {
+  @apply w-[130px] h-[34px];
+}
+
+/* header_menu */
+.header_menu {
+  @apply w-[380px] flex mt-[28px];
+}
+.header_menu > li {
+  @apply relative;
+}
+.header_menu > li > a {
+  @apply text-[#5a5550] px-[18px];
+}
+.header_menu > li > a:hover {
+  @apply text-[#ff7a00];
+}
+.header_subMenu {
+  @apply w-full h-0 top-[54px] z-10 text-center absolute overflow-hidden duration-500;
+}
+.header_subMenu li {
+  @apply mt-[22px] text-white;
+}
+
+/* header_sub */
+.header_sub {
+  @apply w-[160px] flex text-[12px] font-[300] justify-between mt-[30px];
+}
+.header_sub > *:hover {
+  @apply text-[#ff7a00];
+}
+.header_sub > a:last-child {
+  @apply w-[22px] mr-[24px];
+}
+
+.header_bg {
+  width: 100%;
+  height: 0;
+  top: 80px;
+  position: absolute;
+  background: #ff7a00;
+  opacity: 80%;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.on {
+  height: 210px;
+}

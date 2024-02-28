@@ -1,12 +1,12 @@
 import { useState } from "react";
-import styles from "./HomeSearch.module.css";
+import styles from "./HomeSc.module.css";
 import Image from "next/image";
 import { region, category } from "@/storage/name";
-import searchImg from "img/home/searchImg.png";
 import click_false from "img/home/click_false.png";
 import click_true from "img/home/click_true.png";
+import ScButton from "../ScButton/ScButton";
 
-export default function HomeSearch() {
+export default function HomeSc() {
   const [searchItem, setSearchItem] = useState({
     region: "지역 선택",
     category: "유형 선택",
@@ -78,10 +78,7 @@ export default function HomeSearch() {
         <ul>{categoryList}</ul>
       </div>
       <input placeholder="검색어를 입력해보세요." onChange={onChange}></input>
-      <button>
-        검색
-        <Image src={searchImg} alt="searchImg"></Image>
-      </button>
+      <ScButton />
     </form>
   );
 }

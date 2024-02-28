@@ -1,0 +1,12 @@
+/* section1 */
+.section1 {
+  @apply h-[260px] w-full left-0 top-[80px] absolute bg-[#FFC83B]/80;
+}
+.section1 h1 {
+  @apply mt-[40px] text-[26px] font-[500] text-center text-[#5A5550];
+}
+
+/* section2 */
+.section2 {
+  @apply mt-[340px] h-[400px];
+}

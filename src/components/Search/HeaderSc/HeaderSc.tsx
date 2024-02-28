@@ -1,16 +1,26 @@
 import Image from "next/image";
-import styles from "./HeaderSearch.module.css";
+import styles from "./HeaderSc.module.css";
 import searchImg from "img/header/searchImg.png";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function HeaderSearch() {
+type eventType = React.ChangeEvent<HTMLInputElement>;
+
+export default function HeaderSc() {
+  const router = useRouter();
+
   const [search_word, setSearch_word] = useState("");
-  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function onChange(e: eventType) {
     setSearch_word(e.target.value);
   }
 
+  function onSubmit(e: eventType) {
+    e.preventDefault();
+    router.push(`/pages/search?search_word=${search_word}`);
+  }
+
   return (
-    <form className={styles.header_search}>
+    <form className={styles.header_search} onSubmit={() => onSubmit}>
       <input
         placeholder="알고 싶은 정보가 있으세요?"
         onChange={onChange}

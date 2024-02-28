@@ -2,10 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import Search from "@/components/Search/HeaderSearch/HeaderSearch";
 import section1_bg from "img/home/section1_bg.png";
 import more_nonghang from "img/home/more_nonghang.png";
-import HomeSearch from "@/components/Search/HomeSearch/HomeSearch";
+import more_green from "img/home/more_green.png";
+import more_orange from "img/home/more_orange.png";
+import HomeSc from "@/components/Search/HomeSc/HomeSc";
 
 export default function Home() {
   return (
@@ -25,9 +26,47 @@ export default function Home() {
           농행동행 알아보기
           <Image src={more_nonghang} alt="more_nonghang"></Image>
         </Link>
-        <HomeSearch />
+        <HomeSc />
       </section>
-      <section className={styles.section2}></section>
+      <section className={styles.section2}>
+        <article>
+          <div>
+            <h1>우수체험</h1>
+            <Link href="/pages/trip/experience">
+              더 많은 농촌체험 보러가기
+              <Image src={more_green} alt="more_experience"></Image>
+            </Link>
+          </div>
+        </article>
+        <article>
+          <div>
+            <h1>우수숙박</h1>
+            <Link href="/pages/trip/lodgment">
+              더 많은 농촌숙박 보러가기
+              <Image src={more_green} alt="more_lodgement"></Image>
+            </Link>
+          </div>
+        </article>
+        <div>
+          <article>
+            <div>
+              <h1>공지사항</h1>
+              <Link href="/pages/trip/notification">
+                MORE
+                <Image src={more_orange} alt="more_notification"></Image>
+              </Link>
+            </div>
+          </article>
+          <article>
+            <div>
+              <h1>여행후기</h1>
+              <Link href="/pages/trip/review">
+                MORE<Image src={more_orange} alt="more_review"></Image>
+              </Link>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }

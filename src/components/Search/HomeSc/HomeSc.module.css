@@ -1,0 +1,54 @@
+.home_search {
+  @apply w-[80%] h-[112px] rounded-[5px] top-[524px] py-[32px] px-[64px] flex justify-between absolute bg-[#FFC83B]/85;
+}
+.home_search div {
+  @apply w-[180px] h-[48px] rounded-[5px] cursor-pointer;
+}
+.home_search div > div {
+  @apply flex justify-between;
+}
+.home_search div > label {
+  @apply font-[500] block my-[12px] mx-[20px];
+}
+.home_search div > div > img {
+  @apply w-[18px] h-[12px] my-[18px] mr-[20px] ml-[42px];
+}
+.home_search ul {
+  width: 100%;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #5a5550;
+  background: white;
+  overflow-y: auto;
+}
+.home_search > div:first-child > ul {
+  height: 240px;
+}
+.home_search ul :hover {
+  background: #f1f5f9;
+}
+.home_search li {
+  padding: 12px 0 12px 20px;
+  color: #5a5550;
+}
+
+/* off */
+.off {
+  background: white;
+  color: #5a5550;
+}
+.off ul {
+  display: none;
+}
+/* on */
+.on {
+  background: #5a5550;
+  color: white;
+}
+
+.home_search > input {
+  width: 208px;
+  height: 48px;
+  border-radius: 5px;
+  padding: 20px;
+}

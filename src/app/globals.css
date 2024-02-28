@@ -38,7 +38,7 @@
 
 /* main */
 #main {
-  margin-top: 80px;
+  @apply w-[80%] mx-auto;
 }
 #content {
 }

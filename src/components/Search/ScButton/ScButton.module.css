@@ -1,0 +1,14 @@
+.search_button {
+  width: 88px;
+  height: 48px;
+  border-radius: 5px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: #5a5550;
+}
+
+.search_button > img {
+  width: 20px;
+}

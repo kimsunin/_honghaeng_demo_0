@@ -1,42 +1,48 @@
 /* section1 */
 .section1 {
-  height: 500px;
+  @apply h-[500px] mt-[80px];
 }
 .section1 > img {
-  height: 100%;
+  @apply h-[500px] left-0 absolute;
 }
 .section1 > h1 {
-  font-size: 25px;
-  color: #614426;
-  position: absolute;
-  left: 10%;
-  top: 160px;
+  @apply text-[25px] font-[500] text-[#5a5550] absolute top-[160px];
 }
 .section1 > h2 {
-  color: #887664;
-  position: absolute;
-  left: 10%;
-  top: 256px;
+  @apply text-[#5a5550]/60 absolute top-[256px];
 }
 .section1 > a {
-  width: 200px;
-  height: 36px;
-  position: absolute;
-  left: 10%;
-  top: 360px;
-  display: flex;
-  border-radius: 9999px;
-  padding: 6px 20px;
-  color: white;
-  background: #ff7a00;
+  @apply w-[200px] h-[36px] absolute top-[360px] flex rounded-full py-[6px] px-[20px] text-white bg-[#ff7a00];
 }
 .section1 > a > img {
-  width: 22px;
-  height: 10px;
-  margin: 7px 0px 7px 22px;
+  @apply w-[22px] h-[10px] my-[7px] ml-[22px];
 }
 
 /* section2 */
 .section2 {
-  height: 400px;
+  @apply mt-[120px];
+}
+.section2 > article {
+  @apply h-[300px] border-[1px] mt-[40px] flex;
+}
+.section2 article > div {
+  @apply w-full flex justify-between;
+}
+.section2 article > div > h1 {
+  @apply text-[22px] font-[500] text-[#5a5550];
+}
+.section2 article > div > a {
+  @apply text-[#82BF00] mt-[4px] flex;
+}
+.section2 article > div > a > img {
+  @apply w-[8px] h-[13px] mt-[5px] ml-[8px];
+}
+.section2 > div {
+  @apply h-[300px] flex justify-between  my-[40px];
+}
+.section2 > div > article {
+  @apply w-[45%] border-[1px];
+}
+.section2 > div > article > div > a {
+  @apply text-[#FF7A00];
 }

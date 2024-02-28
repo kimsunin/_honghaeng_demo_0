@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import HeaderSearch from "../Search/HeaderSearch/HeaderSearch";
+import HeaderSc from "../Search/HeaderSc/HeaderSc";
 import { headerHref } from "@/storage/href";
 import homeImg from "img/header/homeImg.png";
 import sitemapImg from "img/header/sitemapImg.png";
@@ -44,7 +44,7 @@ export default function Header() {
       >
         {mainMenuList}
       </ul>
-      <HeaderSearch />
+      <HeaderSc />
       <div className={styles.header_sub}>
         <Link href="/pages/mypage/login">로그인</Link>
         <Link href="/pages/mypage">마이페이지</Link>
